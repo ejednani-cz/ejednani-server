@@ -38,7 +38,8 @@ Aplikace vzniká ve volném èase [tımu (aktuálnì jen já)](https://github.com/orgs/
 - Zkopírujte obsah z adresáøe src na svùj server
 - Upravte hodnoty v souboru .env
 - Otevøete pøíkazovou øádku v adresáøi se zkopírovanou aplikací
-- Nainstalujte závislosti pomocí pøíkazu `npm install`
+- Nainstalujte serverové závislosti pomocí pøíkazu `npm install`
+- Nainstalujte klientské závislosti pomocí pøíkazu `bower install`
 - Spuste aplikaci pomocí pøíkazu `node ./server.js` (pøípadnì `nodemon ./server.js`)
 - Vaše instance je dostupná na adrese http://{serverIP}:{portZvolenıVsoubour.env}
 
