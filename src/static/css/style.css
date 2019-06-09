@@ -249,12 +249,11 @@ span.copyleft {
   margin:           auto 0.5em auto auto;
 }
 
-#mobileMenuContainer, #swipeLeft {
+#swipeLeft {
   display:          none;
 }
 
-#mainMenu,
-#userMenuContainer {
+#mainMenu {
   display:          block;
 }
 
@@ -281,13 +280,8 @@ span.copyleft {
 }
 
 @media all and (max-width: 1000px) {
-  #mainMenu,
-  #userMenuContainer {
+  #mainMenu {
     display:        none;
-  }
-
-  #mobileMenuContainer  {
-    display:        block;
   }
 }
 
