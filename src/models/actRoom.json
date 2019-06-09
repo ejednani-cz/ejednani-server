@@ -1,0 +1,29 @@
+{
+    "id": "",
+    "name": "",
+    "type": "room",
+    "group": "",
+    "location": "",
+    "date": "",
+    "time": "",
+    "chairman": "",
+    "writer": ["", ""],
+    "verifier": ["", ""],
+    "program_deadline": "",
+    "program": [
+      {
+        "title": "",
+        "author": "",
+        "reporter": "",
+        "dedicatedTimeInMins": 0,
+        "content": "",
+        "priority": 0,
+        "status": "",
+        "talkers": ["", ""],
+        "factical_note": ["", ""],
+        "technical_note": ["", ""]
+      }
+    ],
+    "status": "",
+    "verified": false
+  }

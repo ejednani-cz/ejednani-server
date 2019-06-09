@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+    <div id="header">
+        <% include partials/header %>
+    </div>
+
+    <div id="container">
+        <% include partials/menu %>
+    
+        <div class="rightCol">
+            <div class="subpageBox">
+                <div class="subpageContent">
+                    <img src="/images/logotyp.svg" id="aboutLogo" />
+
+                    <p>eJednání - <%= aboutAppDescriptionVal %></p>
+                    <p><%= aboutAppVersion %>&nbsp;<%= aboutAppVersionVal %></p>
+                    <p><%= aboutCustomer %>&nbsp;<%= aboutCustomerVal %> (<%= aboutSince %> <%= aboutSinceVal %>)</p>
+                    <p><a href="https://ejednani.cz/">https://ejednani.cz/</a> | <a href="https://github.com/ejednani-cz">GitHub</a></p>
+
+                    <div id="license">
+                        <b class="title"><%= aboutLicense %></b><br />
+                        <p id="licensetext"><%- aboutLicenseText %></p>    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <% include partials/footer %>
+    </div>
+</body>
+</html>

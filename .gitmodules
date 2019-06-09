@@ -1,0 +1,9 @@
+[submodule "src/static/2048"]
+	path = src/static/2048
+	url = https://github.com/ejednani-cz/2048.git
+[submodule "src/osloveni/"]
+	path = src/osloveni/
+	url = https://github.com/ejednani-cz/osloveni.git
+[submodule "src/cs_CZ-name_formatting"]
+	path = src/cs_CZ-name_formatting
+	url = https://github.com/ejednani-cz/cs_CZ-name_formatting.git

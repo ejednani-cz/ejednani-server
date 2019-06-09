@@ -1,0 +1,123 @@
+<div class="leftCol" id="mainMenu">
+    <div class="content">
+        <div class="block">
+            <!--<h2>Správa jednání</h2>-->
+            
+            <a href="/eje/home">
+                <% if (focusedMenuButton === 'home') { %>
+                    <div class="tile focused" id="menuHome">
+                <% } else { %>
+                    <div class="tile" id="menuHome">
+                <% } %>
+                    <img src="/images/icons/house.svg" alt="" />
+                    <div class="title"><%= menu.home %></div>
+                </div>
+            </a>
+                
+            <a href="/eje/new">
+                <% if (focusedMenuButton === 'new') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/add.svg" alt="" />
+                    <div class="title"><%= menu.new %></div>
+                </div>
+            </a>
+                
+            <a href="/eje/list">
+                <% if (focusedMenuButton === 'list') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/list.svg" alt="" />
+                    <div class="title"><%= menu.list %></div>
+                </div>
+            </a>
+
+            <a href="/eje/groups">
+                <% if (focusedMenuButton === 'groups') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/users.svg" alt="" />
+                    <div class="title"><%= menu.groups %></div>
+                </div>
+            </a>
+            
+            <a href="/eje/favourites">
+                <% if (focusedMenuButton === 'favourites') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/star.svg" alt="" />
+                    <div class="title"><%= menu.favourites %></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="block" id="userSection">
+                <h2><%= menu.profileBlock %></h2>
+                
+                <a href="#" class="nonclickable">
+                        <% if (focusedMenuButton === 'profile') { %>
+                            <div class="tile focused">
+                        <% } else { %>
+                            <div class="tile">
+                        <% } %>
+                        <img src="<%= UserProfileAvatar %>" alt="" />
+                        <div class="title"><%= UserProfileName %></div>
+                    </div>
+                </a>
+
+                <a href="/logout">
+                        <div class="tile">
+                        <img src="/images/icons/stop-1.svg" alt="" />
+                        <div class="title"><%= menu.logout %></div>
+                    </div>
+                </a>
+            </div>
+
+        <div class="block">
+            <h2><%= menu.helpBlock %></h2>
+            
+            <a href="/eje/wiki">
+                <% if (focusedMenuButton === 'wiki') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/info.svg" alt="" />
+                    <div class="title"><%= menu.help %></div>
+                </div>
+            </a>
+            
+            <a href="/eje/settings">
+                <% if (focusedMenuButton === 'settings') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/settings.svg" alt="" />
+                    <div class="title"><%= menu.settings %></div>
+                </div>
+            </a>
+            
+            <%- AdminMenuButton %>
+
+            <a href="/eje/about">
+                <% if (focusedMenuButton === 'about') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/logo.svg" alt="eJednani.cz" />
+                    <div class="title"><%= menu.about %></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

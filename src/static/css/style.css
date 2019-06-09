@@ -1,0 +1,315 @@
+html, body {
+  height:           100%;
+  margin:           0;
+  padding:          0;
+}
+
+body {
+  background:     #ffffff;
+  color:          #3a3a3a;
+  font-family:      'Source Sans Pro', sans-serif;
+  font-weight:      300;
+}
+
+
+a:link, a:visited {
+  color:            var(--customerColor);
+  transition:       all ease-in-out 0.5s;
+}
+
+a:hover {
+  color:          #000000;
+  transition:       all ease-in-out 0.5s;
+}
+
+#header {
+  width:            100%;
+  background:       var(--customerColor);
+  position:         relative;
+  top:              0;
+  padding:          0;
+  height:           40px;
+  max-height:       40px;
+  min-height:       40px;
+  position:         absolute;
+  z-index:          8000;
+}
+
+#header img {
+  height:           25px;
+  padding:          0.5em;
+}
+
+#header div.right {
+  position:         absolute;
+  right:            0em;
+  top:              0em;
+}
+
+#header div.right img {
+  border-radius:    50%;
+}
+
+#userMenu a {
+  display:          block;
+  margin:           1em;
+}
+
+#userMenu h2 {
+  font-size:        11pt;
+  margin:           1em;
+  padding:          0;
+}
+
+#container {
+  position:         absolute;
+  top:              40px;
+  bottom:           21px;
+  left:             0;
+  right:            0;
+  display:          flex;
+  flex-flow:        row;
+  overflow:         hidden;
+}
+
+#mainMenu {
+  height:           100%;
+  width:            250px;
+  min-width:        250px;
+  max-width:        250px;
+  background:      #f9f9f9;
+  border-right:     solid 1px #cccccc;
+  overflow-y:       auto;
+}
+
+#container div.leftCol div.block {
+  display:          block;
+  margin:           0 0 2em 0;
+}
+
+#container div.leftCol h2 {
+  font-weight:      400;
+  font-size:        11pt;
+  color:            var(--customerColor);
+  text-align:       center;
+  margin:           0;
+}
+
+#container div.leftCol div.content a {
+  text-decoration:  none;
+}
+
+#container div.leftCol div.tile {
+  display:          table;
+  width:            100%;
+  height:           40px;
+}
+
+#container div.leftCol div.tile:hover,
+#container div.leftCol div.focused {
+  background:     #e9e9e9;
+}
+
+#container div.leftCol div.tile img {
+  display:          table-cell;
+  width:            32px;
+  height:           32px;
+  margin:           0.65em 1em 0.35em 1em;
+  border-radius:    50%;
+  transition:       all ease-in-out .2s;
+}
+#container div.leftCol div.tile:hover img {
+  transform: scale(1.2);
+}
+
+#container div.leftCol div.tile div.title {
+  display:          table-cell;
+  height:           32px;
+  width:            100%;
+  vertical-align:   middle;
+  margin:           0.5em 2em 0.5em 1em;
+  color:            #636363;
+  text-decoration:  none;
+  font-weight:      400;
+}
+
+#container div.leftCol div.content a.nonclickable {
+  cursor:           default;
+}
+#container div.leftCol div.content a.nonclickable div.tile:hover,
+#container div.leftCol div.content a.nonclickable div.focused {
+  background:       none;
+}
+
+#container div.rightCol {
+  height:           100%;
+  flex:             100%;
+  overflow:         auto;
+  position:         relative;
+}
+
+#container div.rightCol div.content {
+  padding:          1em 1em 2.5em 1em;
+}
+
+
+#container div.rightCol div.subpageBox {
+  width:            100%;
+  height:           100%;
+  background:     #ffffff;
+  color:          #636363;
+}
+
+#container div.rightCol div.subpageContent {
+  padding:          2em;
+}
+
+#container div.rightCol div.settings p {
+  display:          table-row;
+}
+
+#container div.rightCol div.settings p input {
+  display:          table-cell;
+}
+
+#container div.rightCol div.settings p span {
+  display:          table-cell;
+  padding:          0.5em 1em 0.5em 1em;
+}
+
+#container div.rightCol div.subpageContent h1 {
+  margin:           auto auto 0.5em auto;
+  padding:          0;
+}
+
+#container div.rightCol div.subpageContent h2 {
+  margin:           1.5em auto 0.5em auto;
+  padding:          0;
+}
+
+#container div.rightCol div.subpageContent div.welcome {
+  font-size:        24pt;
+}
+
+#container div.rightCol iframe { 
+  height:           99.9%; 
+  width:            100%; 
+  border:           none;
+}
+
+#footer {
+  width:            100%;
+  position:         absolute;
+  bottom:           0;
+  left:             0;
+  background:       #e9e9e9;
+  border-top:       solid 1px #cccccc;
+  font-size:        8pt;
+  color:            #3a3a3a;
+  font-family:      sans-serif;
+  line-height:      15px;
+  max-height:       21px;
+  min-height:       21px;
+  height:           21px;
+}
+
+#footer div.content {
+  margin:           0.3em;
+}
+
+#footer div.right {
+  text-align:       right;
+  float:            right;
+  margin-right:     0.5em;
+}
+
+.small {
+  font-size:        12pt;
+}
+
+.thin {
+  font-weight:      300;
+}
+
+.bold {
+  font-weight:      600;
+}
+
+span.copyleft {
+  transform:        matrix(-1, 0, 0, 1, 0, 0);
+  display:          inline-block;
+}
+
+#magicEye {
+  height:           15px;
+  width:            15px;
+  border:           none;
+  position:         relative;
+  float:            left;
+  margin:           auto 0.5em auto auto;
+}
+
+#mobileMenuContainer, #swipeLeft {
+  display:          none;
+}
+
+#mainMenu,
+#userMenuContainer {
+  display:          block;
+}
+
+#license {
+  font-size:        9pt;
+  padding:          2em 0 0 2em;
+  width:            100%;
+}
+
+#license .title {
+  margin-left:      -2em;
+}
+
+#licensetext {
+  font-size:        8pt;
+  width:            98%;
+  height:           450px;
+  font-family:      monospace;
+  white-space:      pre-wrap;
+}
+
+#aboutLogo {
+  height:           100px;
+}
+
+@media all and (max-width: 1000px) {
+  #mainMenu,
+  #userMenuContainer {
+    display:        none;
+  }
+
+  #mobileMenuContainer  {
+    display:        block;
+  }
+}
+
+@media all and (max-width: 550px) {
+  #mainMenu {
+    width:          100%;
+    min-width:      100%;
+    max-width:      100%;
+    display:        none;
+  }
+
+  #container div.rightCol div.subpageContent div.welcome {
+    font-size:      18pt;
+  }
+}
+
+@media all and (max-height: 480px) {
+  #footer {
+    display:        none;
+  }
+
+  #container {
+    bottom:         0;
+  }
+}

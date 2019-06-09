@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Ondřej Kotas, KRtkovo.eu - design studio" />
+  <meta name="description" content="Systém na elektronické vedení jednání" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <title><%= header.title %> &bull; <%= subpageTitle %></title>
+  
+  <link href="/css/customerColor.css" rel="stylesheet" type="text/css" media="screen,projection" />
+  <link href="/css/font.css" rel="stylesheet" type="text/css" media="screen,projection" />
+  <link href="/css/login.css" rel="stylesheet" type="text/css" media="screen,projection" />
+  <link href="/images/logo.svg" type="image/svg+xml" sizes="16x16" rel="icon" />
+  <link href="/css/status.css" rel="stylesheet" type="text/css" media="screen,projection" />
+
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/notify.min.js"></script>
+</head>
+
+<body>
+
+    <div id="loginContainer">
+        <img src="/images/logotyp.svg" alt="eJednani.cz" id="loginLogo" />
+        <div>
+            <form method="POST" action="/auth">
+                <div class="field">
+                    <%= email %><br />
+                    <input type="text" name="email" />
+                </div>
+                <div class="field">
+                    <%= password %><br />
+                    <input type="password" name="password" />
+                </div>
+                <div class="field">
+                    <input type="submit" value="<%= submit %>" />
+                    <!--
+                        <br />
+                        <br />
+                        <a href="#"><%= lostpassword %></a>
+                    -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="magicEye">
+            <div class="plane main">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <%= footer.title %>
+        <div class="right"><span class="copyleft">©</span> <a href="https://ejednani.cz/">eJednání.cz</a> 2019</div>
+    </div>
+
+    <script type="text/javascript">
+        if("<%= loggedOutMessage %>" != "") {
+            $.notify.addStyle('eje', {
+                html: "<div>☺<span data-bootstrap-base/>☺</div>",
+                classes: {
+                    base: {
+                    "border-radius": "none",
+                    },
+                }
+            });
+
+            $.notify("<%= loggedOutMessage %>", "<%= loggedOutMessageType %>", {
+                style: 'eje'
+            });
+        }
+    </script>
+</body>
+</html>

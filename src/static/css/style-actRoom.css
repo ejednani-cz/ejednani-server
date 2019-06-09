@@ -1,0 +1,197 @@
+#actHeader {
+  position:         absolute;
+  left:             0;
+  top:              0;
+  width:            100%;
+  height:           35px;
+  background:       #f9f9f9;
+  border-bottom:    solid 1px #cccccc;
+}
+
+#actHeader h1 {
+  font-size:        16pt;
+  margin:           0.2em 0.5em 0.2em 0.5em;
+  padding:          0;
+  font-weight:      600;
+  color:            #3a3a3a;
+}
+
+#actContainer {
+  width:            100%;
+  position:         absolute;
+  top:              35px;
+  bottom:           130px;
+  left:             0;
+  right:            0;
+  display:          flex;
+  flex-flow:        row;
+}
+
+#actContainer div.actContent {
+  overflow-x:       hidden;
+  overflow-y:       auto;
+  width:            100%;
+}
+
+#actContainer div.actContent div.message {
+  margin:           0;
+  border-bottom:    solid 1px #e9e9e9;
+  width:            100%;
+  display:          flex;
+}
+
+#actContainer div.actContent div.info {
+  font-size:        9pt;
+  font-style:       italic;
+  color:            #999999;
+}
+
+#actContainer div.actContent div.message span {
+  display:          block;
+  padding:          0.5em 1em 0.5em 1em;
+  width:            100%;
+}
+
+#actContainer div.actContent div.message span.datetime {
+  font-size:        8.5pt;
+  font-style:       italic;
+  color:            #999999;
+  width:            100px;
+}
+
+#actContainer div.actContent div.start {
+  font-size:        10pt;
+  color:            #1F9900;
+}
+
+#actContainer div.actContent div.vote {
+  font-size:        10pt;
+  color:            var(--customerColor);
+}
+
+#actContainer div.actContent div.vote div.votingBox {
+  text-align:       center;
+  margin-left:      -100px;
+}
+
+#actContainer div.actContent div.vote div.statement {
+  text-align:       left;
+  padding:          0.5em 1em 0.5em 1em;
+  font-family:      monospace;
+}
+
+#actContainer div.actContent div.vote #voteLike {
+  border-color:     #1F9900;
+  color:            #1F9900;
+}
+
+#actContainer div.actContent div.vote #voteDislike {
+  border-color:     #C20000;
+  color:            #C20000;
+}
+
+#actContainer div.actContent div.vote #voteHold {
+  border-color:     #000000;
+  color:            #000000;
+}
+
+#actContainer div.actlist {
+  width:            200px;
+  max-width:        200px;
+  min-width:        200px;
+  border-left:      solid 1px #cccccc;
+  height:           100%;
+}
+
+#actContainer div.actlist h2 {
+  font-size:        10pt;
+  margin:           0.2em 0.5em 0.2em 0.5em;
+  color:            var(--customerColor);
+  border-bottom:    solid 1px #cccccc;
+}
+
+#actContainer div.actlist ol {
+  margin:           0 0 0 1em;
+  padding:          0;
+}
+
+#actContainer div.actlist div.member,
+#actContainer div.actlist ol li {
+  font-size:        10pt;
+  line-height:      10pt;
+  margin:           0.7em 1em 0.7em 1em;
+}
+
+#actContainer div.actlist div.member img,
+#actContainer div.actlist ol li img {
+  height:           10pt;
+  width:            10pt;
+}
+
+#participationBox {
+  width:            100%;
+  background:       #f9f9f9;
+  border-top:       solid 1px #cccccc;
+  overflow-y:       auto;
+  overflow-x:       hidden;
+  height:           130px;
+  position:         absolute;
+  bottom:           0;
+}
+
+#participationBox div.actContent {
+  text-align:       center;
+}
+
+#participationBox h2 {
+  font-size:        14pt;
+  font-weight:      400;
+  margin:           1em auto auto auto;
+  padding:          0;
+}
+
+#participationBox h2 span.proposal {
+  font-weight:      600;
+}
+
+
+#participationBox #writtenNote {
+  padding:          0.5em 1em 0.5em 1em;
+}
+
+#participationBox #writtenNote input[type='text'] {
+  padding:          0.5em;
+  width:             70%;
+}
+
+#participationBox #writtenNote input[type='submit'] {
+  padding:          0.45em;
+  width:            100px;
+}
+
+@media all and (max-width: 750px), all and (max-height: 400px) {
+  #participationBox {
+    height:           100px;
+  }
+
+  #participationBox h2 {
+    font-size:        10pt;
+  }
+
+  #actHeader h1 {
+    font-size:        12pt;
+  }
+
+  #actHeader {
+    height:           30px;
+  }
+
+  #actContainer {
+    top:              30px;
+    bottom:           100px;
+  }
+
+  #actContainer div.actlist {
+    display:          none;
+  }
+}
