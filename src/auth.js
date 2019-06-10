@@ -1,12 +1,6 @@
 var log = require('./log.js');
 var helpers = require("./helpers.js");
-
-var rdb = require('rethinkdbdash')({
-  host: helpers.getDbHost(),
-  port: helpers.getDbPort(),
-  db: helpers.getDbName(),
-});
-//var rdbConn = require('./dbConn.js');
+var db = require('./db.js');
 
 module.exports = {
   isAuthorized: function(req, res, next) {
@@ -24,7 +18,7 @@ module.exports = {
       // Create user session after login
      
       if(email && password) {
-        rdb.table("users").filter(rdb.row("email").eq(email)).run().then(function(results) {
+        db.rdb.table("users").filter(db.rdb.row("email").eq(email)).run().then(function(results) {
           if (results && results[0] !== undefined && (results[0]['email'] == email)) {
             var sess = req.session;
       
@@ -32,6 +26,7 @@ module.exports = {
             sess.userId = results[0]['user_id'];
             sess.avatar = results[0]['avatar'];
             sess.fullname = results[0]['fullname'];
+            sess.role = results[0]['role'];
             sess.cookie.expires = new Date(Date.now() + (3600 * 1000)); // 1 hour
             sess.cookie.maxAge = 86400 * 1000; // 1 day
             

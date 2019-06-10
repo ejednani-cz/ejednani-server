@@ -15,34 +15,37 @@
         <div class="rightCol">
             <div class="subpageBox">
                 <div class="subpageContent">
-                    <h1><%= newRoom.title %></h1>
+                    <h1>
+                        <%= newRoom.title %>
+                    </h1>
+                    <span class="italic"><%= newRoom.help %>:</span> <span class="value" id="nonMandatoryFieldsInfo"><%= newRoom.newActNonMandatoryFields %></span> <span class="value" id="mandatoryFieldsInfo"><%= newRoom.newActMandatoryFields %></span>
                     
-                    <form action="/" method="POST">
+                    <form action="/eje/new/create" method="POST">
                         <h2><%= newRoom.infoAboutAct %></h2>
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActTitle %>:
                             </span>
                             <span class="value">
-                                <input type="text" name="newActTitle" />
+                                <input type="text" name="newActTitle" required="required" />
                             </span>
                         </div>
 
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActDate %>:
                             </span>
                             <span class="value">
-                                <input type="date" name="newActDate" class="shortValue" />
+                                <input type="date" name="newActDate" class="shortValue" required="required" />
                             </span>
                         </div>
 
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActTime %>:
                             </span>
                             <span class="value">
-                                <input type="time" name="newActTime" class="shortValue"  />
+                                <input type="time" name="newActTime" class="shortValue" required="required" />
                             </span>
                         </div>
 
@@ -64,10 +67,10 @@
                                 <input type="checkbox" name="newActIsPublic" id="newActIsPublic" />
                             </div>
                             <div class="option">
-                                <label for="newActIsPublic1">
-                                    <%= newRoom.newActIsPublic %>:&nbsp;
+                                <label for="newActPublicCanTalk">
+                                    <%= newRoom.newActPublicCanTalk %>:&nbsp;
                                 </label>
-                                <input type="checkbox" name="newActIsPublic1" id="newActIsPublic1" />
+                                <input type="checkbox" name="newActPublicCanTalk" id="newActPublicCanTalk" />
                             </div>
                             
                             <script type="text/javascript">
@@ -77,20 +80,20 @@
 
                         <h2><%= newRoom.infoPersons %></h2>
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActAuthor %>:
                             </span>
                             <span class="value">
-                                <input type="text" name="newActAuthor" class="shortValue" disabled="disabled" value="<%= UserProfileName %>" />
+                                <input type="text" name="newActAuthor" class="shortValue" disabled="disabled" value="<%= UserProfileName %>" required="required" />
                             </span>
                         </div>
     
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActChairman %>:
                             </span>
                             <span class="value">
-                                <select name="newActChairman" id="newActChairman" size="1">
+                                <select name="newActChairman" id="newActChairman" size="1" required="required">
                                     <optgroup label="Evropa">
                                         <option value="GB">Velká Británie</option>
                                         <option value="DE">Německo</option>
@@ -137,11 +140,11 @@
                         </div>
 
                         <div class="row">
-                            <span class="title">
+                            <span class="title mandatory">
                                 <%= newRoom.newActMembersGroup %>:
                             </span>
                             <span class="value">
-                                <select name="newActMembersGroup" id="newActMembersGroup" size="1">
+                                <select name="newActMembersGroup" id="newActMembersGroup" size="1" required="required">
                                     <optgroup label="Evropa">
                                         <option value="GB">Velká Británie</option>
                                         <option value="DE">Německo</option>

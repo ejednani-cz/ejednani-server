@@ -81,14 +81,8 @@ module.exports.renderLoginPage = function renderLoginPage(req, res, message, mes
     });
 }
 
-module.exports.renderAdminMenuButton = function renderAdminMenuButton(req) {
-    if(req.session.role == "Administrator") {
-        var ejs_template = fs.readFileSync("./views/partials/adminMenuButton.ejs",'utf8')
-        rslt = ejs.render(ejs_template,{
-            adminMenuButton: i18n.__('AdminMenuButton'),
-        });
-        return rslt;
-    }
+module.exports.isUserAdmin = function isUserAdmin(req) {
+    return (req.session.role == "Administrator");
 }
 
 module.exports.simpleReadFileSync = function simpleReadFileSync(filePath)

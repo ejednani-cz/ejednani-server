@@ -47,6 +47,7 @@
                 </div>
             </a>
             
+            <!--
             <a href="/eje/favourites" title="<%= menu.favourites %>">
                 <% if (focusedMenuButton === 'favourites') { %>
                     <div class="tile focused">
@@ -57,17 +58,19 @@
                     <div class="title"><%= menu.favourites %></div>
                 </div>
             </a>
+            -->
         </div>
 
         <div class="block" id="userSection">
                 <h2><%= menu.profileBlock %></h2>
                 
-                <a href="#" class="nonclickable" title="<%= UserProfileName %>">
-                        <% if (focusedMenuButton === 'profile') { %>
-                            <div class="tile focused">
-                        <% } else { %>
-                            <div class="tile">
-                        <% } %>
+                <!--<a href="#" class="nonclickable" title="<%= UserProfileName %>">-->
+                <a href="/eje/profile" title="<%= UserProfileName %>">
+                    <% if (focusedMenuButton === 'profile') { %>
+                        <div class="tile focused">
+                    <% } else { %>
+                        <div class="tile">
+                    <% } %>
                         <img src="<%= UserProfileAvatar %>" alt="" />
                         <div class="title"><%= UserProfileName %></div>
                     </div>
@@ -106,7 +109,18 @@
                 </div>
             </a>
             
-            <%- AdminMenuButton %>
+            <% if (IsUserAdmin === true) { %>
+            <a href="/eje/admin">
+                <% if (focusedMenuButton === 'admin') { %>
+                    <div class="tile focused">
+                <% } else { %>
+                    <div class="tile">
+                <% } %>
+                    <img src="/images/icons/adjustment.svg" />
+                    <div class="title"><%= menu.adminMenuButton %></div>
+                </div>
+            </a>
+            <% } %>
 
             <a href="/eje/about" title="<%= menu.about %>">
                 <% if (focusedMenuButton === 'about') { %>

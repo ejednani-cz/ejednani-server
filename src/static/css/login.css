@@ -69,6 +69,7 @@ a:hover {
   font-size:        12pt;
   width:            30%;
   padding:          0.5em;
+  cursor:           pointer;
 }
 
 #footer {

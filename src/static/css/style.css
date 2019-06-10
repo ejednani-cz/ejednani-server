@@ -22,6 +22,10 @@ a:hover {
   transition:       all ease-in-out 0.5s;
 }
 
+label {
+  cursor:           pointer;
+}
+
 #header {
   width:            100%;
   background:       var(--customerColor);
@@ -179,13 +183,13 @@ a:hover {
 #container div.rightCol div.subpageContent h1 {
   margin:           auto auto 0.5em auto;
   padding:          0;
-  font-weight:      400;
+  font-weight:      300;
 }
 
 #container div.rightCol div.subpageContent h2 {
   margin:           1.5em auto 0.5em auto;
   padding:          0;
-  font-weight:      400;
+  font-weight:      300;
 }
 
 #container div.rightCol iframe { 
@@ -200,6 +204,20 @@ a:hover {
   display:          flex;
 }
 
+#container div.rightCol div.subpageContent span#nonMandatoryFieldsInfo {
+  margin-left:      2em;
+  font-size:        10pt;
+  font-size:        12pt;
+}
+
+#container div.rightCol div.subpageContent span#mandatoryFieldsInfo {
+  color:            var(--customerColor);
+  margin-left:      2em;
+  font-size:        10pt;
+  font-weight:      400;
+  font-size:        12pt;
+}
+
 #container div.rightCol div.row span.title {
   text-align:       right;
   padding:          0.5em;
@@ -208,6 +226,11 @@ a:hover {
   min-width:        150px;
   max-width:        150px;
   font-size:        12pt;
+}
+
+#container div.rightCol div.row span.mandatory {
+  color:            var(--customerColor);
+  font-weight:      400;
 }
 
 #container div.rightCol div.row span.value {
@@ -241,6 +264,10 @@ a:hover {
   font-size:        12pt;
   width:            350px;
   float:            right;
+  cursor:           pointer;
+}
+
+#container div.rightCol div.row label {
   cursor:           pointer;
 }
 
@@ -285,6 +312,10 @@ a:hover {
 
 .bold {
   font-weight:      600;
+}
+
+.italic {
+  font-style:       italic;
 }
 
 span.copyleft {
@@ -361,6 +392,51 @@ span.copyleft {
   text-indent:      0;
 }
 
+table.actRoomsTable {
+  width:            100%;
+  margin:           auto;
+  border-collapse:  collapse;
+  border:           solid 1px transparent;
+}
+
+table.actRoomsTable th {
+  border:           solid 1px #ffffff;
+  color:            #ffffff;
+  background-color: var(--customerColor);
+}
+#actRoomsAtTheMoment th {
+  background-color: #32bea6;
+}
+
+table.actRoomsTable th.sorting_desc, table.actRoomsTable th.sorting_asc {
+  color:            #ffe600;
+}
+
+table.actRoomsTable td {
+  padding:          0.2em;
+  border:           solid 1px #ffffff;
+}
+
+table.actRoomsTable td.center {
+  text-align:       center;
+}
+
+table.actRoomsTable tr:nth-child(2n+2) {
+  background:       #f9f9f9;
+}
+
+table.actRoomsTable tr.linkToRoom {
+  cursor:           pointer;
+}
+
+table.actRoomsTable tbody tr:hover {
+  background:       #e9e9e9;
+}
+
+div.tableBox {
+  margin:           auto auto 4em auto;
+}
+
 @media all and (max-width: 900px) {  
   #container div.rightCol div.row input,
   #container div.rightCol div.row input.shortValue {
@@ -409,6 +485,10 @@ span.copyleft {
     width:          100px;
     max-width:      100px;
     min-width:      100px;
+  }
+
+  #container div.rightCol div.row label {
+    font-size:      9pt;
   }
 
   #container div.rightCol div.row input,

@@ -22,6 +22,7 @@ module.exports.translateApplication = function translateApplication(app) {
         profileBlock: i18n.__('ProfileBlock'),
         helpBlock: i18n.__('HelpBlock'),
         groups: i18n.__('GroupsList'),
+        adminMenuButton: i18n.__('AdminMenuButton')
     },
     footer: {
         title: helpers.getCustomer(),
@@ -45,7 +46,25 @@ module.exports.translateApplication = function translateApplication(app) {
         newActMembersGroup:  i18n.__('NewActMembersGroup'),
         newActAuthor: i18n.__('NewActAuthor'),
         createActRoom: i18n.__('CreateActRoomButton'),
-        newActIsPublic: i18n.__('NewActIsPublic')
+        newActIsPublic: i18n.__('NewActIsPublic'),
+        newActMandatoryFields: i18n.__('NewActMandatoryFields'),
+        newActNonMandatoryFields: i18n.__('NewActNonMandatoryFields'),
+        help: i18n.__('Help'),
+        newActPublicCanTalk: i18n.__('PublicCanTalk')
+    },
+    list: {
+        th: {
+            actTitle: i18n.__('NewActTitle'),
+            actDate: i18n.__('NewActDate'),
+            actTime: i18n.__('NewActTime'),
+            actLocation: i18n.__('NewActLocation'),
+            actChairman: i18n.__('NewActChairman'),
+            actMemberGroup: i18n.__('NewActMembersGroup'),
+            actStatus: i18n.__('ActStatus'),
+        },
+        acts: {
+            listTitle: i18n.__('List')
+        }
     },
     settings: {
         title: i18n.__('Settings'),

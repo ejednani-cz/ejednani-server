@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+    <div id="header">
+        <% include partials/header %>
+    </div>
+
+    <div id="container">
+        <% include partials/menu %>
+    
+        <div class="rightCol">
+            <div class="subpageBox">
+                <div class="subpageContent">
+                    <h1><%= list.acts.listTitle %></h1>
+
+                    <div class="filterBox">
+
+                    </div>
+
+                    <div class="tableBox">    
+                        <table class="actRoomsTable" id="actRooms" border="1">
+                            <thead>
+                                <tr>
+                                    <th><%= list.th.actTitle %></th>
+                                    <th><%= list.th.actChairman %></th>
+                                    <th><%= list.th.actDate %></th>
+                                    <th><%= list.th.actTime %></th>
+                                    <th><%= list.th.actLocation %></th>
+                                    <th><%= list.th.actMemberGroup %></th>
+                                    <th><%= list.th.actStatus %></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(let i = 0; i < actRooms.length; i++) { %>
+                                    <tr onclick="javascript:window.location.href='/eje/room/<%= actRooms[i].id %>';" class="linkToRoom">
+                                        <td><%= actRooms[i].title %></td>
+                                        <td><%= actRooms[i].chairman %></td>
+                                        <td><%= actRooms[i].date %></td>
+                                        <td><%= actRooms[i].time %></td>
+                                        <td><%= actRooms[i].location %></td>
+                                        <td><%= actRooms[i].group %></td>
+                                        <td><%= actRooms[i].status %></td>
+                                    </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('#actRooms').DataTable( {
+                                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                "order": [[ 0, "asc" ]],
+                                stateSave: false
+                            } );
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <% include partials/footer %>
+    </div>
+</body>
+</html>
