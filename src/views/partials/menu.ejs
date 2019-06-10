@@ -3,7 +3,7 @@
         <div class="block">
             <!--<h2>Správa jednání</h2>-->
             
-            <a href="/eje/home">
+            <a href="/eje/home" title="<%= menu.home %>">
                 <% if (focusedMenuButton === 'home') { %>
                     <div class="tile focused" id="menuHome">
                 <% } else { %>
@@ -14,7 +14,7 @@
                 </div>
             </a>
                 
-            <a href="/eje/new">
+            <a href="/eje/new" title="<%= menu.new %>">
                 <% if (focusedMenuButton === 'new') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -25,7 +25,7 @@
                 </div>
             </a>
                 
-            <a href="/eje/list">
+            <a href="/eje/list" title="<%= menu.list %>">
                 <% if (focusedMenuButton === 'list') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -36,7 +36,7 @@
                 </div>
             </a>
 
-            <a href="/eje/groups">
+            <a href="/eje/groups" title="<%= menu.groups %>">
                 <% if (focusedMenuButton === 'groups') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -47,7 +47,7 @@
                 </div>
             </a>
             
-            <a href="/eje/favourites">
+            <a href="/eje/favourites" title="<%= menu.favourites %>">
                 <% if (focusedMenuButton === 'favourites') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -62,7 +62,7 @@
         <div class="block" id="userSection">
                 <h2><%= menu.profileBlock %></h2>
                 
-                <a href="#" class="nonclickable">
+                <a href="#" class="nonclickable" title="<%= UserProfileName %>">
                         <% if (focusedMenuButton === 'profile') { %>
                             <div class="tile focused">
                         <% } else { %>
@@ -73,7 +73,7 @@
                     </div>
                 </a>
 
-                <a href="/logout">
+                <a href="/logout" title="<%= menu.logout %>">
                         <div class="tile">
                         <img src="/images/icons/stop-1.svg" alt="" />
                         <div class="title"><%= menu.logout %></div>
@@ -84,7 +84,7 @@
         <div class="block">
             <h2><%= menu.helpBlock %></h2>
             
-            <a href="/eje/wiki">
+            <a href="/eje/wiki" title="<%= menu.help %>">
                 <% if (focusedMenuButton === 'wiki') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -95,7 +95,7 @@
                 </div>
             </a>
             
-            <a href="/eje/settings">
+            <a href="/eje/settings" title="<%= menu.settings %>">
                 <% if (focusedMenuButton === 'settings') { %>
                     <div class="tile focused">
                 <% } else { %>
@@ -108,16 +108,36 @@
             
             <%- AdminMenuButton %>
 
-            <a href="/eje/about">
+            <a href="/eje/about" title="<%= menu.about %>">
                 <% if (focusedMenuButton === 'about') { %>
                     <div class="tile focused">
                 <% } else { %>
                     <div class="tile">
                 <% } %>
-                    <img src="/images/logo.svg" alt="eJednani.cz" />
+                    <img src="/images/logo.svg" />
                     <div class="title"><%= menu.about %></div>
                 </div>
             </a>
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    if(!Cookies.get("mainMenuVisibility")) {
+        if($(window).width() <= 900) {
+            Cookies.set("mainMenuVisibility", "hidden");
+        }
+        else {
+            Cookies.set("mainMenuVisibility", "visible");
+        }
+    }
+    else {
+        if($(window).width() <= 550 && Cookies.get("mainMenuVisibility") == "visible") {
+            Cookies.set("mainMenuVisibility", "hidden");
+        }
+    }
+    
+    $("#mainMenu").addClass(Cookies.get("mainMenuVisibility"));
+    
+</script>

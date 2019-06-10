@@ -25,6 +25,8 @@
         <img src="/images/logotyp.svg" alt="eJednani.cz" id="loginLogo" />
         <div>
             <form method="POST" action="/auth">
+                <input type="hidden" name="urlToRedirect" value="<%= currentUrl %>" />
+                
                 <div class="field">
                     <%= email %><br />
                     <input type="text" name="email" />
@@ -46,18 +48,7 @@
     </div>
 
     <div id="footer">
-        <div id="magicEye">
-            <div class="plane main">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-        </div>
-        <%= footer.title %>
-        <div class="right"><span class="copyleft">©</span> <a href="https://ejednani.cz/">eJednání.cz</a> 2019</div>
+        <% include partials/footer %>
     </div>
 
     <script type="text/javascript">

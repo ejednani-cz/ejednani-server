@@ -36,7 +36,13 @@ module.exports = {
             sess.cookie.maxAge = 86400 * 1000; // 1 day
             
             log.log("User '" + email + "' logged in");
-            return res.redirect("/eje");
+
+            /* Redirect to the requested site before login redirect 
+            * (based on hidden input type prefiled by server,
+            * useful in situation when user is logged out due to the expired session)
+            */
+            var urlToRedirect = (req.body.urlToRedirect != "/logout") ? req.body.urlToRedirect : "/eje";
+            return res.redirect(urlToRedirect);
           }
           else {
             helpers.renderLoginFailed(req, res);

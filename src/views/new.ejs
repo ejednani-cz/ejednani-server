@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+    <div id="header">
+        <% include partials/header %>
+    </div>
+
+    <div id="container">
+        <% include partials/menu %>
+    
+        <div class="rightCol">
+            <div class="subpageBox">
+                <div class="subpageContent">
+                    <h1><%= newRoom.title %></h1>
+                    
+                    <form action="/" method="POST">
+                        <h2><%= newRoom.infoAboutAct %></h2>
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActTitle %>:
+                            </span>
+                            <span class="value">
+                                <input type="text" name="newActTitle" />
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActDate %>:
+                            </span>
+                            <span class="value">
+                                <input type="date" name="newActDate" class="shortValue" />
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActTime %>:
+                            </span>
+                            <span class="value">
+                                <input type="time" name="newActTime" class="shortValue"  />
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActLocation %>:
+                            </span>
+                            <span class="value">
+                                <input type="text" name="newActLocation" />
+                            </span>
+                        </div>
+
+                        <h2><%= newRoom.infoOptions %></h2>
+                        <div class="row">
+                            <div class="option">
+                                <label for="newActIsPublic">
+                                    <%= newRoom.newActIsPublic %>:&nbsp;
+                                </label>
+                                <input type="checkbox" name="newActIsPublic" id="newActIsPublic" />
+                            </div>
+                            <div class="option">
+                                <label for="newActIsPublic1">
+                                    <%= newRoom.newActIsPublic %>:&nbsp;
+                                </label>
+                                <input type="checkbox" name="newActIsPublic1" id="newActIsPublic1" />
+                            </div>
+                            
+                            <script type="text/javascript">
+                                $.switcher();
+                            </script>
+                        </div>
+
+                        <h2><%= newRoom.infoPersons %></h2>
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActAuthor %>:
+                            </span>
+                            <span class="value">
+                                <input type="text" name="newActAuthor" class="shortValue" disabled="disabled" value="<%= UserProfileName %>" />
+                            </span>
+                        </div>
+    
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActChairman %>:
+                            </span>
+                            <span class="value">
+                                <select name="newActChairman" id="newActChairman" size="1">
+                                    <optgroup label="Evropa">
+                                        <option value="GB">Velká Británie</option>
+                                        <option value="DE">Německo</option>
+                                        <option value="FR">Francie</option>
+                                        <option value="CZ">Česko</option>
+                                        <option value="SK">Slovensko</option>
+                                    </optgroup>
+                                    <optgroup label="Amerika">
+                                        <option value="USA">USA</option>
+                                        <option value="CD">Kanada</option>
+                                        <option value="MX">Mexiko</option>
+                                    </optgroup>
+                                    <optgroup label="Asie">
+                                        <option value="RU">Rusko</option>
+                                    </optgroup>
+                                </select>
+
+                                <script>
+                                    $('#newActChairman').selectize({
+                                        persist: false,
+                                        createOnBlur: true,
+                                        create: true
+                                    });
+                                </script>
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActWriters %>:
+                            </span>
+                            <span class="value">
+                                <input type="text" name="newActWriters" />
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActVerifiers %>:
+                            </span>
+                            <span class="value">
+                                <input type="text" name="newActVerifiers" />
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="title">
+                                <%= newRoom.newActMembersGroup %>:
+                            </span>
+                            <span class="value">
+                                <select name="newActMembersGroup" id="newActMembersGroup" size="1">
+                                    <optgroup label="Evropa">
+                                        <option value="GB">Velká Británie</option>
+                                        <option value="DE">Německo</option>
+                                        <option value="FR">Francie</option>
+                                        <option value="CZ">Česko</option>
+                                        <option value="SK">Slovensko</option>
+                                    </optgroup>
+                                    <optgroup label="Amerika">
+                                        <option value="USA">USA</option>
+                                        <option value="CD">Kanada</option>
+                                        <option value="MX">Mexiko</option>
+                                    </optgroup>
+                                    <optgroup label="Asie">
+                                        <option value="RU">Rusko</option>
+                                    </optgroup>
+                                </select>
+                                
+                                <script>
+                                    $('#newActMembersGroup').selectize({
+                                        persist: false,
+                                        createOnBlur: true,
+                                        create: true
+                                    });
+                                </script>
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <span class="value">
+                                <input type="submit" value="<%= newRoom.createActRoom %> &raquo;" />
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <% include partials/footer %>
+    </div>
+</body>
+</html>

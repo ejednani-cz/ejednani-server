@@ -31,7 +31,7 @@ if (req.session) {
     if(err) {
         return next(err);
     } else {
-        helpers.renderLoginPage(res, i18n.__('LoggedOutMessage'), "success");
+        helpers.renderLoginPage(req, res, i18n.__('LoggedOutMessage'), "success");
     }
     });
 }

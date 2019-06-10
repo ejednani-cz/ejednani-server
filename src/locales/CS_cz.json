@@ -35,5 +35,21 @@
 	"SettingsInsideRoom": "Při jednání",
 	"GroupsList": "Členské skupiny",
 	"Error404": "Stránka nenalezena",
-	"AdminMenuButton": "Administrační sekce"
+	"AdminMenuButton": "Administrační sekce",
+	"ShowHideMainMenu": "Skrýt/Zobrazit hlavní nabídku",
+	"NewActTitle": "Název jednání",
+	"NewActDate": "Datum zahájení",
+	"NewActTime": "Čas zahájení",
+	"NewActLocation": "Místo jednání",
+	"NewActChairman": "Předsedající",
+	"NewActWriters": "Zapisovatelé",
+	"NewActVerifiers": "Ověřovatelé zápisu",
+	"InfoAboutAct": "Údaje o jednání",
+	"InfoPersons": "Osoby",
+	"InfoOptions": "Další možnosti",
+	"NewActMembersGroup": "Skupina účastníků",
+	"ActProgram": "Program jednání",
+	"NewActAuthor": "Autor",
+	"CreateActRoomButton": "Vytvořit jednání",
+	"NewActIsPublic": "Jednání je veřejné"
 }

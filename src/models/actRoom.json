@@ -6,6 +6,7 @@
     "location": "",
     "date": "",
     "time": "",
+    "author": "",
     "chairman": "",
     "writer": ["", ""],
     "verifier": ["", ""],
@@ -25,5 +26,6 @@
       }
     ],
     "status": "",
-    "verified": false
+    "verified": false,
+    "public": false
   }

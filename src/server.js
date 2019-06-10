@@ -11,53 +11,22 @@ var http = require("http").Server(app);
 var router = require("./router.js");
 var routerEje = require("./router.eje.js");
 var helpers = require("./helpers.js");
+var log = require('./log.js');
+var auth = require("./auth.js");
+var translateApp = require('./translateApp.js');
 
 const { version } = require('./package.json');
 
-var log = require('./log.js');
-var auth = require("./auth.js");
-
-
-
-// Init modules
-i18n.configure({
-  defaultLocale: 'cs_CZ',
-  directory: __dirname + '/locales'
-});
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// Prefill global vars with translated texts
-Object.assign(app.locals, {
-  header: {
-    title: "eJednání"
-  },
-  menu: {
-    home: i18n.__('Home'),
-    new: i18n.__('New'),
-    favourites: i18n.__('Favourites'),
-    list: i18n.__('List'),
-    profile: i18n.__('Profile'),
-    logout: i18n.__('Logout'),
-    help: i18n.__('Help'),
-    settings: i18n.__('Settings'),
-    about: i18n.__('About'),
-    profileBlock: i18n.__('ProfileBlock'),
-    helpBlock: i18n.__('HelpBlock'),
-    groups: i18n.__('GroupsList'),
-  },
-  footer: {
-    title: helpers.getCustomer(),
-  },
-  /*nav: {
-    links: [
-      { text: 'Home', path: '/' },
-      { text: 'About', path: '/about' },
-      { text: 'Contact', path: '/contact' }
-    ]
-  }*/
+// translate application
+i18n.configure({
+  defaultLocale: 'cs_CZ',
+  directory: __dirname + '/locales'
 });
+translateApp.translateApplication(app);
 
 // Middlewares to accept POST requests
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -64,10 +64,10 @@ module.exports.renderLoginFailed = function renderLoginFailed(req, res, customMe
         messageType = "error";
     }
 
-    return this.renderLoginPage(res, message, messageType);
+    return this.renderLoginPage(req, res, message, messageType);
 };
 
-module.exports.renderLoginPage = function renderLoginPage(res, message, messageType) {
+module.exports.renderLoginPage = function renderLoginPage(req, res, message, messageType) {
     return res.render("login", {
         subpageTitle: i18n.__('Login'),
         email: i18n.__('Email'),
@@ -77,6 +77,7 @@ module.exports.renderLoginPage = function renderLoginPage(res, message, messageT
         submit: i18n.__('LoginSubmit'),
         loggedOutMessage: message,
         loggedOutMessageType: messageType,
+        currentUrl: req.originalUrl
     });
 }
 
@@ -88,4 +89,10 @@ module.exports.renderAdminMenuButton = function renderAdminMenuButton(req) {
         });
         return rslt;
     }
+}
+
+module.exports.simpleReadFileSync = function simpleReadFileSync(filePath)
+{
+    var options = {encoding:'utf-8', flag:'r'};
+    return fs.readFileSync(filePath, options);
 }

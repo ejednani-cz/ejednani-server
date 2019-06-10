@@ -152,7 +152,6 @@ a:hover {
   padding:          1em 1em 2.5em 1em;
 }
 
-
 #container div.rightCol div.subpageBox {
   width:            100%;
   height:           100%;
@@ -180,21 +179,74 @@ a:hover {
 #container div.rightCol div.subpageContent h1 {
   margin:           auto auto 0.5em auto;
   padding:          0;
+  font-weight:      400;
 }
 
 #container div.rightCol div.subpageContent h2 {
   margin:           1.5em auto 0.5em auto;
   padding:          0;
-}
-
-#container div.rightCol div.subpageContent div.welcome {
-  font-size:        24pt;
+  font-weight:      400;
 }
 
 #container div.rightCol iframe { 
   height:           99.9%; 
   width:            100%; 
   border:           none;
+}
+
+#container div.rightCol div.row {
+  margin:           auto;
+  width:            100%;
+  display:          flex;
+}
+
+#container div.rightCol div.row span.title {
+  text-align:       right;
+  padding:          0.5em;
+  margin:           0.5em;
+  width:            150px;
+  min-width:        150px;
+  max-width:        150px;
+  font-size:        12pt;
+}
+
+#container div.rightCol div.row span.value {
+  width:            100%;
+}
+
+#container div.rightCol div.row input {
+  padding:          0.5em;
+  margin:           0.5em;
+  font-size:        12pt;
+  width:            90%;
+}
+
+#container div.rightCol div.row input.shortValue {
+  padding:          0.5em;
+  margin:           0.5em;
+  font-size:        12pt;
+  width:            350px;
+}
+
+#container div.rightCol div.row select {
+  padding:          0.5em;
+  margin:           0.5em;
+  font-size:        12pt;
+  width:            368px;
+}
+
+#container div.rightCol div.row input[type="submit"] {
+  padding:          0.5em;
+  margin:           0.5em;
+  font-size:        12pt;
+  width:            350px;
+  float:            right;
+  cursor:           pointer;
+}
+
+#container div.rightCol div.row div.option {
+  padding:          0.5em;
+  margin:           0.5em;
 }
 
 #footer {
@@ -279,22 +331,114 @@ span.copyleft {
   height:           100px;
 }
 
-@media all and (max-width: 1000px) {
-  #mainMenu {
-    display:        none;
+#mainMenu.hidden {
+  width:            65px;
+  min-width:        65px;
+  max-width:        65px;
+  overflow:         hidden;
+}
+
+#mainMenu.hidden h2 {
+  display:          none;
+}
+
+#mainMenu.visible {
+  width:            250px;
+  min-width:        250px;
+  max-width:        250px;
+}
+
+#mainMenu.visible h2 {
+  display:          block;
+}
+
+#mainMenu.hidden div.title {
+  white-space:      nowrap;
+  overflow:         hidden;
+  text-indent:      40px;
+}
+#mainMenu.visible div.title {
+  text-indent:      0;
+}
+
+@media all and (max-width: 900px) {  
+  #container div.rightCol div.row input,
+  #container div.rightCol div.row input.shortValue {
+    width:          90%;
+  }
+
+  #container div.rightCol div.row select {
+    width:          93.5%;
   }
 }
 
 @media all and (max-width: 550px) {
-  #mainMenu {
+  #mainMenu,
+  #mainMenu.visible,
+  #mainMenu.hidden {
     width:          100%;
     min-width:      100%;
     max-width:      100%;
     display:        none;
   }
 
-  #container div.rightCol div.subpageContent div.welcome {
+  #mainMenu.hidden {
+    display:        none;
+  }
+
+  #mainMenu.visible,
+  #mainMenu.visible h2 {
+    display:        block;
+  }
+
+  #mainMenu.visible div.title {
+    text-indent:    0;
+  }
+
+  #container div.rightCol div.subpageContent h1 {
     font-size:      18pt;
+  }
+
+  #container div.rightCol div.subpageContent h2 {
+    font-size:      12pt;
+  }
+
+  #container div.rightCol div.row span.title {
+    font-size:      9pt;
+    line-height:    9pt;
+    width:          100px;
+    max-width:      100px;
+    min-width:      100px;
+  }
+
+  #container div.rightCol div.row input,
+  #container div.rightCol div.row input.shortValue,
+  #container div.rightCol div.row select {
+    padding:        0.25em;
+    margin:         0.25em;
+    font-size:      10pt;
+  }
+
+  #container div.rightCol div.row input[type="submit"] {
+    padding:        0.25em;
+    margin:         0.25em;
+    font-size:      10pt;
+    width:          150px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  #container div.rightCol div.subpageContent {
+    padding:          1em;
+  }
+
+  #container div.rightCol div.row input,
+  #container div.rightCol div.row input.shortValue {
+    width:          110px;
+  }
+
+  #container div.rightCol div.row select {
+    width:          120px;
   }
 }
 
