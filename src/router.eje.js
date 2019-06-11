@@ -27,6 +27,7 @@ router.get("/", function(req, res) {
     res.render("home", {
         focusedMenuButton: "home",
         subpageTitle: i18n.__('Home'),
+        // "osloveni" function is working just for cs_CZ language!
         HelloUserName: osloveni.osloveniFullname(req.session.fullname)
     });
 

@@ -61,9 +61,22 @@ module.exports.translateApplication = function translateApplication(app) {
             actChairman: i18n.__('NewActChairman'),
             actMemberGroup: i18n.__('NewActMembersGroup'),
             actStatus: i18n.__('ActStatus'),
+            actAuthor: i18n.__('NewActAuthor')
         },
         acts: {
             listTitle: i18n.__('List')
+        },
+        filterbox: {
+            showClosedActs: i18n.__('ShowClosedActsFilter'),
+            applyFiltersButton: i18n.__('ApplyFiltersButton'),
+            authorField: i18n.__('ShowAuthorField'),
+            chairmanField: i18n.__('ShowChairmanField'),
+            dateField: i18n.__('ShowDateField'),
+            timeField: i18n.__('ShowTimeField'),
+            locationField: i18n.__('ShowLocationField'),
+            memberGroupField: i18n.__('ShowMemberGroupsField'),
+            statusField: i18n.__('ShowStatusField'),
+            showLabel: i18n.__('ShowLabel')
         }
     },
     settings: {

@@ -18,7 +18,68 @@
                     <h1><%= list.acts.listTitle %></h1>
 
                     <div class="filterBox">
+                        <h2><%= list.filterbox.showLabel %></h2>
+                        <div class="row">
+                            <div class="option">
+                                <label for="showClosedActs">
+                                    <%= list.filterbox.showClosedActs %>
+                                </label><br />
+                                <input type="checkbox" name="showClosedActs" id="showClosedActs" />
+                            </div>
+                            
+                            <div class="option">
+                                <label for="showChairmanField">
+                                    <%= list.filterbox.chairmanField %>
+                                </label><br />
+                                <input type="checkbox" name="showChairmanField" id="showChairmanField" checked="checked" />
+                            </div>
 
+                            <div class="option">
+                                <label for="showAuthorField">
+                                    <%= list.filterbox.authorField %>
+                                </label><br />
+                                <input type="checkbox" name="showAuthorField" id="showAuthorField" />
+                            </div>
+
+                            <div class="option">
+                                <label for="showDateField">
+                                    <%= list.filterbox.dateField %>
+                                </label><br />
+                                <input type="checkbox" name="showDateField" id="showDateField" checked="checked" />
+                            </div>                            
+
+                            <div class="option">
+                                <label for="showTimeField">
+                                    <%= list.filterbox.timeField %>
+                                </label><br />
+                                <input type="checkbox" name="showTimeField" id="showTimeField" checked="checked" />
+                            </div>
+
+                            <div class="option">
+                                <label for="showLocationField">
+                                    <%= list.filterbox.locationField %>
+                                </label><br />
+                                <input type="checkbox" name="showLocationField" id="showLocationField" checked="checked" />
+                            </div>
+
+                            <div class="option">
+                                <label for="showMemberGroupField">
+                                    <%= list.filterbox.memberGroupField %>
+                                </label><br />
+                                <input type="checkbox" name="showMemberGroupField" id="showMemberGroupField" checked="checked" />
+                            </div>
+
+                            <div class="option">
+                                <label for="showStatusField">
+                                    <%= list.filterbox.statusField %>
+                                </label><br />
+                                <input type="checkbox" name="showStatusField" id="showStatusField" checked="checked" />
+                            </div>
+                            
+                            <script type="text/javascript">
+                                $.switcher();
+                            </script>
+                        </div>
                     </div>
 
                     <div class="tableBox">    
@@ -26,6 +87,7 @@
                             <thead>
                                 <tr>
                                     <th><%= list.th.actTitle %></th>
+                                    <th><%= list.th.actAuthor %></th>
                                     <th><%= list.th.actChairman %></th>
                                     <th><%= list.th.actDate %></th>
                                     <th><%= list.th.actTime %></th>
@@ -38,6 +100,7 @@
                                 <% for(let i = 0; i < actRooms.length; i++) { %>
                                     <tr onclick="javascript:window.location.href='/eje/room/<%= actRooms[i].id %>';" class="linkToRoom">
                                         <td><%= actRooms[i].title %></td>
+                                        <td><%= actRooms[i].author %></td>
                                         <td><%= actRooms[i].chairman %></td>
                                         <td><%= actRooms[i].date %></td>
                                         <td><%= actRooms[i].time %></td>

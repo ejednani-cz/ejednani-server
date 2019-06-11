@@ -71,10 +71,17 @@
                     <% } else { %>
                         <div class="tile">
                     <% } %>
-                        <img src="<%= UserProfileAvatar %>" alt="" />
+
+                    <% if (UserProfileAvatar != '') { %>
+                        <img src="<%= UserProfileAvatar %>" alt="avatar" class="UserProfileAvatar" />
+                    <% } else { %>
+                        <img avatar="<%= UserProfileName %>" src="/images/profile.png" alt="avatar" class="UserProfileAvatar" />
+                    <% } %>
                         <div class="title"><%= UserProfileName %></div>
                     </div>
                 </a>
+
+                <script type="text/javascript" src="/js/initials.js"></script>
 
                 <a href="/logout" title="<%= menu.logout %>">
                         <div class="tile">

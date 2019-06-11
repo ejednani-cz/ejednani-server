@@ -18,7 +18,9 @@
                     <h1>
                         <%= newRoom.title %>
                     </h1>
-                    <span class="italic"><%= newRoom.help %>:</span> <span class="value" id="nonMandatoryFieldsInfo"><%= newRoom.newActNonMandatoryFields %></span> <span class="value" id="mandatoryFieldsInfo"><%= newRoom.newActMandatoryFields %></span>
+                    <div class="help">
+                        <span class="italic"><%= newRoom.help %>:</span> <span class="value" id="nonMandatoryFieldsInfo"><%= newRoom.newActNonMandatoryFields %></span> <span class="value" id="mandatoryFieldsInfo"><%= newRoom.newActMandatoryFields %></span>
+                    </div>
                     
                     <form action="/eje/new/create" method="POST">
                         <h2><%= newRoom.infoAboutAct %></h2>

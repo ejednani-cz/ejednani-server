@@ -19,11 +19,13 @@ module.exports = {
      
       if(email && password) {
         db.rdb.table("users").filter(db.rdb.row("email").eq(email)).run().then(function(results) {
+          
           if (results && results[0] !== undefined && (results[0]['email'] == email)) {
+            
             var sess = req.session;
       
             sess.email = email;
-            sess.userId = results[0]['user_id'];
+            sess.userId = results[0]['id'];
             sess.avatar = results[0]['avatar'];
             sess.fullname = results[0]['fullname'];
             sess.role = results[0]['role'];
@@ -37,6 +39,8 @@ module.exports = {
             * useful in situation when user is logged out due to the expired session)
             */
             var urlToRedirect = (req.body.urlToRedirect != "/logout") ? req.body.urlToRedirect : "/eje";
+            console.log(results);
+            console.log(urlToRedirect);
             return res.redirect(urlToRedirect);
           }
           else {

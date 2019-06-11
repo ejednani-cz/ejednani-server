@@ -29,8 +29,8 @@
 	"NewActAuthor": "Autor",
 	"CreateActRoomButton": "Vytvořit jednání",
 	"NewActIsPublic": "Jednání je veřejné",
-	"NewActMandatoryFields": "Povinná pole",
-	"NewActNonMandatoryFields": "Nepovinná pole",
+	"NewActMandatoryFields": "Povinné pole",
+	"NewActNonMandatoryFields": "Nepovinné pole",
 	"PublicCanTalk": "Veřejnost smí vystoupit v rozpravě",
 	"ActStatus": "Stav",
 	"SettingsGlobal": "Obecné",
@@ -60,5 +60,15 @@
 	"AdminSection": "AdminSection",
 	"ActsInFuture": "Naplánovaná jednání",
 	"ActsAtTheMoment": "Právě probíhající jednání",
-	"ActsInPast": "Archiv ukončených jednání"
+	"ActsInPast": "Archiv ukončených jednání",
+	"ShowClosedActsFilter": "Ukončená jednání",
+	"ApplyFiltersButton": "Vyfiltrovat",
+	"ShowAuthorField": "Autora",
+	"ShowChairmanField": "Předsedajícího",
+	"ShowDateField": "Datum zahájení",
+	"ShowTimeField": "Čas zahájení",
+	"ShowLocationField": "Místo jednání",
+	"ShowMemberGroupsField": "Skupinu účastníků",
+	"ShowStatusField": "Stav",
+	"ShowLabel": "Zobrazit"
 }

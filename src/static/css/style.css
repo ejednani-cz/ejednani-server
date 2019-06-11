@@ -192,6 +192,12 @@ label {
   font-weight:      300;
 }
 
+#container div.rightCol div.subpageContent div.filterBox h2 {
+  margin:           1em auto 0 auto;
+  padding:          0;
+  font-weight:      300;
+}
+
 #container div.rightCol iframe { 
   height:           99.9%; 
   width:            100%; 
@@ -206,7 +212,6 @@ label {
 
 #container div.rightCol div.subpageContent span#nonMandatoryFieldsInfo {
   margin-left:      2em;
-  font-size:        10pt;
   font-size:        12pt;
 }
 
@@ -265,6 +270,14 @@ label {
   width:            350px;
   float:            right;
   cursor:           pointer;
+}
+
+#container div.rightCol input[type="button"] {
+  padding:          0.3em 0.75em 0.3em 0.75em;
+  margin:           0.2em;
+  font-size:        10pt;
+  cursor:           pointer;
+  float:            right;
 }
 
 #container div.rightCol div.row label {
@@ -437,6 +450,15 @@ div.tableBox {
   margin:           auto auto 4em auto;
 }
 
+div.help {
+  font-size:        9pt;
+}
+
+div.filterBox {
+  margin:           auto auto 3em auto;
+  border-bottom:    solid 1px #cccccc;
+}
+
 @media all and (max-width: 900px) {  
   #container div.rightCol div.row input,
   #container div.rightCol div.row input.shortValue {
@@ -504,6 +526,14 @@ div.tableBox {
     margin:         0.25em;
     font-size:      10pt;
     width:          150px;
+  }
+
+  #container div.rightCol div.subpageContent span#nonMandatoryFieldsInfo {
+    font-size:        9pt;
+  }
+  
+  #container div.rightCol div.subpageContent span#mandatoryFieldsInfo {
+    font-size:        9pt;
   }
 }
 
