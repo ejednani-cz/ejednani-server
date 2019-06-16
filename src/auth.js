@@ -39,8 +39,6 @@ module.exports = {
             * useful in situation when user is logged out due to the expired session)
             */
             var urlToRedirect = (req.body.urlToRedirect != "/logout") ? req.body.urlToRedirect : "/eje";
-            console.log(results);
-            console.log(urlToRedirect);
             return res.redirect(urlToRedirect);
           }
           else {
